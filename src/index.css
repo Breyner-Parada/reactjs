@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(75,118,226);
+background: linear-gradient(151deg, rgba(75,118,226,1) 0%, rgba(217,140,12,1) 100%);
+  color: #1E1E1F;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  margin: 0 24px;
+  position: relative;
+  min-height: 100vh;
+}

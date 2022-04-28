@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+.TituloPrimary{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 0;
+}
+
+.TodoCounter{
+    font-size: 18px;
+    font-style: oblique;
+    text-align: center;
+    margin-top: 0;
+}

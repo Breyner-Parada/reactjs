@@ -16,3 +16,9 @@
     font-size: 25px;
     margin-bottom: 50px;
 }
+
+@media (max-width: 580px) {
+    .loaded-img{
+        width: 100%;
+    }
+}

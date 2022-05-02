@@ -10,6 +10,7 @@ import { TodoForm } from '../Components/TodoForm';
 import {MsgError} from '../Components/MsgError';
 import {MsgLoading} from '../Components/MsgLoading';
 import {MsgLoaded} from '../Components/MsgLoaded';
+import {MsgNoResult} from '../Components/MsgNoResult';
 // import './App.css';
 /* const defaultTodos = [
   { text: 'Cortar cebolla', completed: false},
@@ -28,6 +29,8 @@ function App() {
     completeTodo, 
     deleteTodo,
     openModal,
+    totalTodos,
+    
 
   } = React.useContext(TodoContext);
 
@@ -38,10 +41,11 @@ function App() {
 
       <TodoSearch />
       
-      <TodoList>
+      <TodoList >
         {error && <MsgError />}
         {loading && <MsgLoading />}
-        {(!loading && !searchedTodos.length) && <MsgLoaded />}
+        {(!loading && !totalTodos) && <MsgLoaded />}
+        {(!!totalTodos && !searchedTodos.length) && <MsgNoResult /> }
         {searchedTodos.map(todo => (
           <TodoItem key={todo.text} text={todo.text} completed={todo.completed} onComplete={() => completeTodo(todo.text)} onDelete={() => deleteTodo(todo.text)}/>
           ))}
